@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>KING WEB 👑 | هدية على مزاجك يا قمر 💖</title>
+<style>
+:root{--gold:#e2b84f;--gold2:#ffe9a0;--bg:#050505;--panel:#0d0d0f;--muted:#aaa49a;--line:#302715;--green:#20c879}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f7f2e7;font-family:Tahoma,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 50% 42%,#211707 0,#0b0905 38%,#030303 78%)}
+/* Interactive royal-crown background: integrated into the site, not a preview image. */
+#royal-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden;perspective:1000px;isolation:isolate}
+#royal-aura{position:absolute;width:min(105vw,820px);aspect-ratio:1;left:50%;top:48%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(226,184,79,.13) 0%,rgba(137,89,19,.055) 35%,transparent 69%);filter:blur(8px)}
+#royal-crown{position:absolute;width:min(86vw,660px);height:auto;left:50%;top:48%;transform:translate3d(calc(-50% + var(--crown-x,0px)),calc(-50% + var(--crown-y,0px)),0) rotateX(var(--crown-rx,0deg)) rotateY(var(--crown-ry,0deg));transform-style:preserve-3d;opacity:.25;filter:drop-shadow(0 0 18px rgba(226,184,79,.27));transition:transform .18s ease-out,filter .25s,opacity .25s;will-change:transform}
+#royal-crown .crown-line{fill:url(#crownGold);stroke:#f7d878;stroke-width:2.3;stroke-linejoin:round}
+#royal-crown .crown-detail{fill:none;stroke:#ffe9a0;stroke-width:1.4;opacity:.78}
+#royal-crown .crown-gem{fill:#f4d36f;stroke:#fff0b2;stroke-width:1.2;filter:url(#gemGlow)}
+#royal-bg.is-touched #royal-crown{opacity:.4;filter:drop-shadow(0 0 30px rgba(226,184,79,.5))}
+#particles{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.particle{position:absolute;width:3px;height:3px;border-radius:50%;background:#ffe8a0;box-shadow:0 0 9px 3px #e2b84f55;animation:float var(--t) ease-in-out infinite alternate;opacity:var(--o)}
+@keyframes float{to{transform:translate3d(var(--x),-30px,0) scale(1.8);opacity:.9}}
+header{height:64px;position:sticky;top:0;z-index:20;background:#050505d9;border-bottom:1px solid #e2b84f25;backdrop-filter:blur(15px);display:flex;align-items:center;justify-content:space-between;padding:0 18px;max-width:560px;margin:auto}
+.brand{font-size:19px;font-weight:900;letter-spacing:1px;color:var(--gold2)}.brand span{color:#fff}
+.menu{background:none;border:1px solid #e2b84f55;color:var(--gold2);font-size:20px;border-radius:10px;width:38px;height:38px}
+main{max-width:560px;margin:auto;padding-bottom:112px}
+.screen{display:block;min-height:calc(100vh - 64px);padding:34px 18px 48px;scroll-margin-top:70px;animation:appear .3s ease}.screen + .screen{border-top:1px solid #e2b84f18}.screen:after{content:'';display:block;width:64px;height:2px;margin:38px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.45}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{text-align:center;padding-top:22px}
+.logo-stage{width:min(66vw,285px);aspect-ratio:1;margin:0 auto 15px;perspective:900px;display:grid;place-items:center;position:relative;cursor:pointer;touch-action:manipulation}
+.logo-stage:before{content:"";position:absolute;inset:8%;border-radius:50%;border:1px solid #e2b84f55;box-shadow:0 0 32px #e2b84f1a,inset 0 0 28px #e2b84f12;transition:.35s}
+.logo-stage:after{content:"";position:absolute;inset:0;border-radius:50%;border:1px dashed #e2b84f26;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo-stage img{width:86%;height:86%;object-fit:contain;border-radius:50%;filter:drop-shadow(0 0 17px #e2b84f40);mix-blend-mode:screen;transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .4s;transform-style:preserve-3d}
+.logo-stage.touched img{transform:rotateY(20deg) rotateX(-12deg) scale(1.06);filter:drop-shadow(0 0 30px #f0c95f99)}
+.logo-stage.touched:before{box-shadow:0 0 60px #e2b84f45,inset 0 0 42px #e2b84f28}
+.eyebrow{display:inline-block;border:1px solid #e2b84f4d;background:#e2b84f0d;color:var(--gold2);border-radius:99px;padding:8px 13px;font-size:11px;margin:6px 0 18px}
+h1{font-size:clamp(31px,8vw,44px);line-height:1.45;margin:0 auto 12px;font-weight:900}.gold{color:var(--gold2);text-shadow:0 0 22px #e2b84f18}
+.lead{color:#bdb7a9;font-size:13px;line-height:2;margin:0 auto 23px;max-width:430px}
+.btn{width:100%;display:flex;justify-content:center;align-items:center;gap:10px;padding:15px 16px;border-radius:15px;border:1px solid #f3d77e;background:linear-gradient(110deg,#b98220,#f6d979 48%,#c9962e);color:#130d02;font-size:15px;font-weight:900;text-decoration:none;cursor:pointer;box-shadow:0 8px 27px #d4a73c20;transition:.2s}
+.btn:active{transform:scale(.985)}.privacy{margin:16px 0 0;border:1px solid #ffffff12;border-radius:13px;padding:13px;color:#c7c1b4;font-size:11px;line-height:1.9;background:#ffffff04}
+.section-title{text-align:center;margin:5px 0 22px}.section-title h2{font-size:26px;margin:0 0 8px}.section-title p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{position:relative;text-align:center;border:1px solid #e2b84f24;background:linear-gradient(145deg,#15130fdf,#090909f5);border-radius:24px;min-height:145px;padding:18px 10px;color:#fff;cursor:pointer;transition:.22s;box-shadow:inset 0 1px 0 #ffffff08}
+.card:active{transform:scale(.98)}.card.selected{border-color:var(--gold);box-shadow:0 0 22px #e2b84f20,inset 0 0 18px #e2b84f0b;background:#211a0b}
+.card .icon{width:55px;height:55px;border-radius:17px;margin:0 auto 12px;display:grid;place-items:center;background:#e2b84f12;border:1px solid #e2b84f26;color:var(--gold2);font-size:27px}
+.card strong{font-size:13px;display:block;margin-bottom:6px}.card small{color:#a9a294;font-size:10px;line-height:1.7;display:block}
+.card .tick{position:absolute;top:10px;left:12px;color:var(--gold2);display:none}.card.selected .tick{display:block}
+.colors{display:grid;gap:9px;margin:17px 0 22px}.color-option{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;border-radius:15px;border:1px solid #ffffff1a;background:#0d0d0f;color:#e9e3d6;text-align:right;font:inherit;font-size:12px;cursor:pointer}.color-option.active{border-color:var(--gold);background:#1b160b}.swatch{width:24px;height:24px;border-radius:50%;border:1px solid #ffffff55;flex-shrink:0}.color-option .plus{margin-right:auto;color:#a59b83}
+.stats{display:grid;gap:12px}.stat{position:relative;overflow:hidden;padding:23px 15px;text-align:center;border:1px solid #e2b84f45;border-radius:19px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 #ffffff12,0 8px 30px #0002}.stat:before{content:"";position:absolute;inset:-70% auto auto -25%;width:150px;height:150px;background:#e2b84f12;filter:blur(24px);border-radius:50%}.stat strong{position:relative}.stat span{position:relative}.stat strong{display:block;font-size:35px;color:var(--gold2);margin-bottom:6px}.stat span{font-size:12px;color:#aaa49a}
+.benefits{display:grid;gap:10px}.benefit{display:flex;align-items:center;gap:14px;border:1px solid #e2b84f1d;border-radius:15px;padding:15px;background:#0c0c0d}.benefit .icon{width:43px;height:43px;border-radius:13px;background:#e2b84f13;color:var(--gold2);display:grid;place-items:center;font-size:22px;flex-shrink:0}.benefit b{display:block;font-size:13px;color:var(--gold2);margin-bottom:5px}.benefit small{font-size:11px;color:#aaa49a;line-height:1.8}
+.contact{text-align:center;padding-top:35px}.wa-orb{width:106px;height:106px;margin:8px auto 25px;border-radius:34px;display:grid;place-items:center;color:#100d05;font-size:53px;background:linear-gradient(145deg,#ffe9a0,#b88120);box-shadow:0 0 50px #e2b84f25;transform:rotate(-4deg)}.phone{font-size:27px;direction:ltr;color:var(--gold2);margin:20px 0 8px;letter-spacing:1px;font-weight:800}.socials{display:flex;justify-content:center;gap:12px;margin:22px 0}.social{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:1px solid #e2b84f45;background:#0e0e0f;color:var(--gold2);font-size:24px;text-decoration:none;transition:.2s}.social:hover{transform:translateY(-3px);box-shadow:0 0 18px #e2b84f20}.summary{padding:14px;border:1px solid #e2b84f30;border-radius:14px;text-align:right;color:#c7c1b4;line-height:2;font-size:12px;margin:18px 0}.summary b{color:var(--gold2)}
+.bottom-nav{position:fixed;z-index:30;bottom:10px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),520px);display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:9px 6px calc(9px + env(safe-area-inset-bottom));border-radius:29px;border:1px solid #3a3429;background:#151522ed;box-shadow:0 10px 40px #000b;backdrop-filter:blur(18px)}
+.nav{border:0;background:transparent;color:#77788c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:4px 1px;font-size:10px;cursor:pointer}.nav i{font-style:normal;font-size:21px;width:43px;height:38px;display:grid;place-items:center;border-radius:15px}.nav.active{color:#f7e2a0;font-weight:700}.nav.active i{background:linear-gradient(135deg,#c68c25,#f0d476);color:#171006;box-shadow:0 4px 17px #e2b84f26}
+footer{text-align:center;border-top:1px solid #ffffff10;padding:24px 12px;color:#706a5d;font-size:10px;letter-spacing:1px}
+@media(min-width:600px){body{background:#080808}.screen{padding-top:38px}.hero{padding-top:30px}.logo-stage{width:280px}}
+</style>
+</head>
+<body>
+<div id="royal-bg" aria-hidden="true">
+  <div id="royal-aura"></div>
+  <svg id="royal-crown" viewBox="0 0 600 430" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="crownGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0a6"/><stop offset=".38" stop-color="#d7a638"/><stop offset=".7" stop-color="#8b5a13"/><stop offset="1" stop-color="#f6d778"/></linearGradient>
+      <filter id="gemGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <!-- Faceted, dimensional crown drawn as inline vector artwork -->
+    <path class="crown-line" d="M93 155 L190 226 L254 92 L315 222 L414 112 L453 249 L505 170 L470 325 Q300 369 130 325 Z" opacity=".92"/>
+    <path class="crown-detail" d="M93 155 L190 226 L130 325 M190 226 L254 92 L275 337 M254 92 L315 222 L315 347 M315 222 L414 112 L356 338 M414 112 L453 249 L470 325 M453 249 L505 170 L470 325"/>
+    <path class="crown-line" d="M130 325 Q300 368 470 325 L453 360 Q300 405 147 360 Z"/>
+    <path class="crown-detail" d="M145 342 Q300 382 455 342 M164 359 Q300 393 436 359"/>
+    <path class="crown-detail" d="M108 169 L183 239 L247 113 M268 117 L309 236 L405 135 M426 143 L446 263 L487 190"/>
+    <circle class="crown-gem" cx="254" cy="92" r="8"/><circle class="crown-gem" cx="414" cy="112" r="7"/><circle class="crown-gem" cx="93" cy="155" r="6"/><circle class="crown-gem" cx="505" cy="170" r="6"/><circle class="crown-gem" cx="315" cy="222" r="5"/>
+  </svg>
+</div>
+<div id="particles"></div>
+<header><div class="brand">KING <span>WEB</span> 👑</div><button class="menu" aria-label="القائمة" onclick="go('services')">☰</button></header>
+<main>
+<section class="screen active" id="home">
+<div class="hero">
+<div class="eyebrow">👑💛 هدايا ديجيتال معمولة بحب وعلى مزاجك 💛👑</div>
+<div class="logo-stage" id="logoStage" role="button" aria-label="المس الشعار لتحريكه" tabindex="0"><img src="assets/king-web-logo.png" alt="شعار KING WEB"></div>
+<h1>يا باشا، خلّيها تفرح من قلبها 😍<br><span class="gold">هدية أونلاين تفضل فاكرها العمر كله 👑💌</span></h1>
+<p class="lead">عايز تصالحها؟ 🎀 ولا تفاجئ حبيبتك في عيد ميلادها؟ 🎂 ولا تقولها بحبك بطريقة مختلفة؟ 🥹❤️ إحنا نعملك موقع مخصوص باسمها وصوركم وكلامكم الحلو، وإنت تختار التفاصيل على مزاجك!</p>
+<button class="btn" onclick="go('services')">يلا نجهّز المفاجأة 🎁😍 <span>➤</span></button>
+<div class="privacy">🔒 متقلقش يا نجم، تفاصيل المفاجأة بتفضل عندك لحد ما تدوس بنفسك وتبعتلنا على واتساب 💬🤫</div>
+</div>
+<div class="stats home-stats" style="margin-top:34px">
+  <div class="stat"><strong><span class="counter" id="visitCount">150</span></strong><span>👀 زيارةللموقع</span></div>
+  <div class="stat"><strong><span class="counter" id="clientCount">9</span></strong><span>🎁 أفكار هدايا</span></div>
+  <div class="stat"><strong><span class="counter" id="memoryCount">90</span></strong><span>🎨 هدية صممناها</span></div>
+</div>
+<p style="font-size:10px;color:#a69e8b;text-align:center;margin:10px 0 0;line-height:1.8">👑 عدّاد الزيارات بيحسب من نفس المتصفح، والأرقام التانية بتوضح اختيارات الموقع المتاحة — مش أرقام عملاء وهمية.</p>
+</section>
+<section class="screen" id="services">
+<div class="section-title"><div class="eyebrow">🎁 اختار اللي في دماغك</div><h2>اختار المفاجأة <span class="gold">اللي تليق بحكايتكم 💘</span></h2><p>قولي نفسك تفرّح مين وإحنا نساعدك تعملها بطريقة كيوت 🥹👇</p></div>
+<div class="grid">
+<button class="card" data-service="هدية للكابلز المرتبطين"><span class="tick">✓</span><div class="icon">💗</div><strong>للحبايب والكابلز 💑💗</strong><small>حكايتكم وصوركم وكلام القلب كله في مكان واحد 🥹💌</small></button>
+<button class="card" data-service="هدية للمخطوبين"><span class="tick">✓</span><div class="icon">💍</div><strong>للمخطوبين يا عرسان 💍😂</strong><small>اسمك واسمها وتفاصيلكم الحلوة في هدية واحدة 💞</small></button>
+<button class="card" data-service="هدية عيد جواز"><span class="tick">✓</span><div class="icon">🥂</div><strong>عيد جواز يا سيدي 🥂❤️</strong><small>فكّرها بأحلى يوم في حياتكم 🎉💋</small></button>
+<button class="card" data-service="هدية عيد ميلاد"><span class="tick">✓</span><div class="icon">🎂</div><strong>عيد ميلاد يا قمر 🎂🎈</strong><small>اسم وصور ورسالة حلوة تخلي اليوم مميز 😍🎁</small></button>
+<button class="card" data-service="هدية تصالح روح قلبك"><span class="tick">✓</span><div class="icon">🫶</div><strong>عايز تراضيها؟ 🥹🫶</strong><small>رسالة من القلب من غير لف ودوران 💌❤️</small></button>
+<button class="card" data-service="هدية لشهر رمضان"><span class="tick">✓</span><div class="icon">🌙</div><strong>رمضان كريم يا حلو 🌙✨</strong><small>تهنئة لطيفة بطابعك إنت 🤍</small></button>
+<button class="card" data-service="هدية للشتاء"><span class="tick">✓</span><div class="icon">☕</div><strong>هدية شتوية تدفي القلب ☕🧣</strong><small>كلمتين حلوين وذكريات تدفي الجو 💛</small></button>
+<button class="card" data-service="هدية للسنة الجديدة"><span class="tick">✓</span><div class="icon">✨</div><strong>للسنة الجديدة ✨</strong><small>ابدأوا السنة برسالة تفرّح القلب 🥳</small></button>
+<button class="card" data-service="فكرة من اختيار العميل"><span class="tick">✓</span><div class="icon">🎁</div><strong>عندك فكرة جامدة؟ 🎁🔥</strong><small>قولنا نفسك في إيه، ونشوف نقدر ننفذها إزاي 😎</small></button>
+</div>
+<button class="btn" style="margin-top:20px" onclick="go('colors')">يلا نختار الألوان 🎨 ←</button>
+</section>
+<section class="screen" id="colors">
+<div class="section-title"><div class="eyebrow">الخطوة الثانية</div><h2>اختار ألوان <span class="gold">المفاجأة 🎨💖</span></h2><p>أسود وذهبي ملكي 👑 ولا وردي كيوت 🌸؟ اختار اللي يعجبك!</p></div>
+<div class="colors">
+<button class="color-option active" data-color="أسود وذهبي"><span class="swatch" style="background:linear-gradient(135deg,#050505 50%,#e2b84f 50%)"></span>أسود وذهبي <span class="plus">✓</span></button>
+<button class="color-option" data-color="أسود وفضي"><span class="swatch" style="background:linear-gradient(135deg,#050505 50%,#c6cbd2 50%)"></span>أسود وفضي <span class="plus">＋</span></button>
+<button class="color-option" data-color="كحلي وذهبي"><span class="swatch" style="background:linear-gradient(135deg,#11172c 50%,#e2b84f 50%)"></span>كحلي وذهبي <span class="plus">＋</span></button>
+<button class="color-option" data-color="أبيض وأزرق"><span class="swatch" style="background:linear-gradient(135deg,#fff 50%,#2e7cdd 50%)"></span>أبيض وأزرق <span class="plus">＋</span></button>
+<button class="color-option" data-color="بنفسجي ووردي"><span class="swatch" style="background:linear-gradient(135deg,#8755d9 50%,#ef8bc7 50%)"></span>بنفسجي ووردي <span class="plus">＋</span></button>
+<button class="color-option" data-color="ألوان مخصصة"><span class="swatch" style="background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red)"></span>ألوان من اختيارك <span class="plus">✦</span></button>
+</div>
+<button class="btn" onclick="go('contact')">كمل يا جميل 💌 ←</button>
+</section>
+<section class="screen" id="work">
+<div class="section-title"><div class="eyebrow">كل حكاية وليها لمسة 💌✨</div><h2>هديتك مش مجرد <span class="gold">لينك 💌</span></h2><p>نعملك حاجة شبهكم إنتوا، مش كلام كوبي بيست وخلاص 😍📸</p></div>
+<div class="grid">
+<div class="card"><div class="icon">💗</div><strong>كلام حب من القلب 💗🥹</strong><small>رسالة مخصوصة باسمها وكلامك إنت 💌</small></div>
+<div class="card"><div class="icon">🎁</div><strong>مفاجأة تخليها تقول واااو 😍🎁</strong><small>تفتح اللينك وتكتشف المفاجأة واحدة واحدة ✨</small></div>
+<div class="card"><div class="icon">🫶</div><strong>حقك عليّا يا ست الكل 🥹🫶</strong><small>اعتذار محترم وكلام من القلب ❤️‍🩹</small></div>
+<div class="card"><div class="icon">📸</div><strong>صوركم وأغانيكم 📸🎶</strong><small>لمّوا أحلى اللحظات في مكان واحد 💞</small></div>
+<div class="card"><div class="icon">🎂</div><strong>عيد ميلاد ومناسبات 🎂🎉</strong><small>كل مناسبة وليها مفاجأة على قدها 🎁</small></div>
+<div class="card"><div class="icon">✨</div><strong>فكرتك إنت يا نجم 💡🔥</strong><small>إنت احكي وإحنا نرتّبها معاك خطوة بخطوة 🤝</small></div>
+</div>
+</section>
+<section class="screen" id="benefits">
+<div class="section-title"><div class="eyebrow">طب ليه KING WEB؟ 👑😎</div><h2>تفاصيل صغيرة، <span class="gold">فرق كبير</span></h2><p>من أول ما تبعتلنا لحد ما فكرتك تبقى جاهزة 💛</p></div>
+<div class="benefits">
+<div class="benefit"><div class="icon">✧</div><div><b>مش أي هدية وخلاص 💝</b><small>نظبط الاسم والصور والألوان والكلام على حكايتكم إنتوا 🥹💗</small></div></div>
+<div class="benefit"><div class="icon">◷</div><div><b>كل حاجة بالاتفاق 🤝</b><small>نتكلم في فكرتك والتفاصيل قبل ما نبدأ، عشان تبقى عارف كل حاجة 👌</small></div></div>
+<div class="benefit"><div class="icon">▣</div><div><b>يفتح حلو على الموبايل 📱✨</b><small>الموقع يتظبط على الموبايل والشاشات المختلفة 💫</small></div></div>
+<div class="benefit"><div class="icon">♢</div><div><b>خصوصيتك في عينينا 🔒</b><small>تفاصيل المفاجأة بتفضل بيننا في الشات 🤫💌</small></div></div>
+<div class="benefit"><div class="icon">⚙</div><div><b>على مزاجك إنت 🎨😎</b><small>إنت تختار الرسالة والألوان والحركات اللي تحبها 💛</small></div></div>
+</div>
+</section>
+<section class="screen contact" id="contact">
+<div class="eyebrow">يلا يا نجم، نبدأ منين؟ 😍👇</div><div class="wa-orb">☏</div>
+<h2>جاهز تفرّح حد غالي عليك؟ 🥹<br><span class="gold">ابعتلنا ونظبطها سوا 👑💌</span></h2>
+<p class="lead">ابعتلنا على واتساب وقولنا: الهدية لمين؟ والمناسبة إيه؟ 💬🎁 وإحنا هنكمل معاك التفاصيل واحدة واحدة.</p>
+<div class="summary" id="summary">الخدمة: <b>لم يتم الاختيار بعد</b><br>الألوان: <b>أسود وذهبي</b></div>
+<a class="btn" id="whatsappLink" href="https://wa.me/201552971269" target="_blank" rel="noopener">💚 يلا نرغي في فكرتك على واتساب</a>
+<div class="phone">01552971269</div><p style="color:#a69e8b;font-size:12px">ولو بتحب السوشيال، إحنا موجودين هنا كمان 😎👇</p>
+<div class="socials">
+<a class="social" href="https://www.facebook.com/share/19k5w7BSt5/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+<a class="social" href="https://wa.me/201552971269" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+<a class="social" href="https://www.instagram.com/king6942580?mdxt=MWNvaXB6NnMydDg0NQ==" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+</div>
+<button class="btn" style="background:#17130b;color:var(--gold2);border-color:#5b4720" onclick="go('home')">⌂ ارجع لأول الصفحة يا قمر</button>
+</section>
+</main>
+<footer>إنت تخيّل المفاجأة... وإحنا نساعدك تطلعها للنور 💭✨<br><br>KING WEB © 2026 — جميع الحقوق محفوظة</footer>
+<nav class="bottom-nav">
+<button class="nav active" data-id="home" onclick="go('home')"><i>⌂</i>الرئيسية</button>
+<button class="nav" data-id="work" onclick="go('work')"><i>▦</i>أعمالنا</button>
+<button class="nav" data-id="benefits" onclick="go('benefits')"><i>◇</i>المميزات</button>
+<button class="nav" data-id="services" onclick="go('services')"><i>☷</i>المناسبات</button>
+<button class="nav" data-id="contact" onclick="go('contact')"><i>➤</i>تواصل</button>
+</nav>
+<script>
+const particles=document.getElementById('particles');
+for(let i=0;i<68;i++){let p=document.createElement('span');p.className='particle';p.style.left=Math.random()*100+'%';p.style.top=Math.random()*100+'%';p.style.setProperty('--t',(2+Math.random()*5)+'s');p.style.setProperty('--o',(0.2+Math.random()*.6));p.style.setProperty('--x',(-18+Math.random()*36)+'px');p.style.animationDelay=(-Math.random()*5)+'s';particles.appendChild(p)}
+// The crown gently tilts toward the user's finger/mouse position, then settles back.
+const royalBg=document.getElementById('royal-bg');
+let crownResetTimer;
+function moveRoyalCrown(event){
+ const x=(event.clientX/window.innerWidth-.5), y=(event.clientY/window.innerHeight-.5);
+ royalBg.style.setProperty('--crown-rx',(-y*13).toFixed(2)+'deg');
+ royalBg.style.setProperty('--crown-ry',(x*18).toFixed(2)+'deg');
+ royalBg.style.setProperty('--crown-x',(x*13).toFixed(1)+'px');
+ royalBg.style.setProperty('--crown-y',(y*10).toFixed(1)+'px');
+ royalBg.classList.add('is-touched');
+ clearTimeout(crownResetTimer);
+ crownResetTimer=setTimeout(()=>{royalBg.style.setProperty('--crown-rx','0deg');royalBg.style.setProperty('--crown-ry','0deg');royalBg.style.setProperty('--crown-x','0px');royalBg.style.setProperty('--crown-y','0px');royalBg.classList.remove('is-touched')},850);
+}
+window.addEventListener('pointerdown',moveRoyalCrown,{passive:true});
+window.addEventListener('pointermove',event=>{if(event.pointerType==='touch'||event.buttons)moveRoyalCrown(event)},{passive:true});
+let service='',color='أسود وذهبي';window.addEventListener('load',initCounters);
+function go(id){if(id==='home')animateCounters();if(id==='contact')updateSummary();const target=document.getElementById(id);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.id===id))}
+document.querySelectorAll('[data-service]').forEach(el=>el.addEventListener('click',()=>{document.querySelectorAll('[data-service]').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');service=el.dataset.service;updateSummary();go('contact')}));
+document.querySelectorAll('[data-color]').forEach(el=>el.addEventListener('click',()=>{document.querySelectorAll('[data-color]').forEach(x=>{x.classList.remove('active');const plus=x.querySelector('.plus');if(plus)plus.textContent='＋'});el.classList.add('active');const plus=el.querySelector('.plus');if(plus)plus.textContent='✓';color=el.dataset.color;updateSummary()}));
+function readCount(key,fallback=0){try{return Number(localStorage.getItem(key) || fallback)}catch(e){return fallback}}
+function writeCount(key,value){try{localStorage.setItem(key,String(value))}catch(e){}}
+function animateNumber(el,target){
+ const duration=950,start=performance.now();
+ function step(now){const p=Math.min((now-start)/duration,1);el.textContent=Math.floor(target*(1-Math.pow(1-p,3))).toLocaleString('en-US');if(p<1)requestAnimationFrame(step)}
+ requestAnimationFrame(step);
+}
+function initCounters(){
+ // A genuine per-browser visit counter. This does not pretend to be a global server counter.
+ let visits=readCount('kingweb_visits',0)+1;writeCount('kingweb_visits',visits);
+ const visitEl=document.getElementById('visitCount');
+ const clientEl=document.getElementById('clientCount');
+ const memoryEl=document.getElementById('memoryCount');
+ if(visitEl)animateNumber(visitEl,visits);
+ // These counters show the 9 gift categories and 6 available color choices, not fabricated customer totals.
+ if(clientEl)animateNumber(clientEl,9);
+ if(memoryEl)animateNumber(memoryEl,6);
+}
+function updateSummary(){document.getElementById('summary').innerHTML='الخدمة: <b>'+(service||'هنتحدد في المحادثة')+'</b><br>الألوان: <b>'+color+'</b>';const msg='أهلاً KING WEB 👑، حابب أطلب '+(service||'خدمة تصميم/برمجة موقع')+'، والألوان المفضلة: '+color+'. ممكن نتكلم عن التفاصيل؟';document.getElementById('whatsappLink').href='https://wa.me/201552971269?text='+encodeURIComponent(msg)}
+const logo=document.getElementById('logoStage');
+function bumpLogo(){logo.classList.add('touched');setTimeout(()=>logo.classList.remove('touched'),700)}
+logo.addEventListener('pointerdown',bumpLogo);logo.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();bumpLogo()}});
+const sectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.id===entry.target.id))}})},{rootMargin:'-25% 0px -60% 0px',threshold:0});
+document.querySelectorAll('.screen').forEach(section=>sectionObserver.observe(section));
+</script>
+</body>
+</html>
